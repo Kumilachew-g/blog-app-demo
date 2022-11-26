@@ -9,6 +9,7 @@ class Post < ApplicationRecord
 
     private
 
-    def update_post_count
+    def update_posts_count
+        author.update(posts_count: author.posts.size)
     end
 end
