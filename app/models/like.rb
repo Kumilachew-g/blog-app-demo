@@ -3,6 +3,7 @@ class Like < ApplicationRecord
   belongs_to :author, class_name: 'User', foreign_key: :user_id
 
   after_save :update_likes_count
+  after_destroy :update_likes_count
 
   private
 
