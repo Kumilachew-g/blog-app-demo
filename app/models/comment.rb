@@ -1,5 +1,5 @@
 class Comment < ApplicationRecord
-  blongs_to :post
+  blongs_to :post, counter_cache: :comments_count
   belongs_to :author, class_name: 'User', foreign_key: :user_id
 
   after_save :update_comments_count
