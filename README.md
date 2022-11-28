@@ -1,1 +1,1 @@
-# blog-app-demo
+# Blog App
